@@ -1,0 +1,91 @@
+
+<div class="ucla campus">
+    <div class="col span_1_of_4">
+        <div class= "grey-background">
+        <article class="event-card">
+                <a class="event-card__link" href="#">
+                    <img class="event-card__image" src="/img/examples/event-card-example-1.jpg" alt="Image description">
+                    <h1 class="event-card__title"><span>Event card 1/4 title</span></h1>
+                </a>
+                <div class="event-card-info">
+                    <div class="event-card-info__date">
+                        <span class="small-block">
+                            <span class="event-card-info__day">Wed</span>
+                            <span class="event-card-info__month">Aug</span>
+                        </span>
+                        <span class="event-card-info__number">19</span>
+                    </div>
+                    <div class="event-card-info__time"><span class="event-card-icon__time"></span>1 p.m. PDT | 4 p.m. EDT</div>
+                    <div class="event-card-info__location"><span class="event-card-icon__play"></span>Recording Available</div>
+                    <div class="event-card-info__description">Event cart 1/4 description</div>
+                </div>
+            </article>
+            </div>
+    </div>
+    <div class="col span_1_of_4">
+        <div class= "grey-background">
+         <article class="event-card">
+                <a class="event-card__link" href="#">
+                    <img class="event-card__image" src="/img/examples/event-card-example-2.jpg" alt="Image description">
+                    <h1 class="event-card__title"><span>Event card 2/4 title</span></h1>
+                </a>
+                <div class="event-card-info">
+                    <div class="event-card-info__date">
+                        <span class="small-block">
+                            <span class="event-card-info__day">Wed</span>
+                            <span class="event-card-info__month">Aug</span>
+                        </span>
+                        <span class="event-card-info__number">19</span>
+                    </div>
+                    <div class="event-card-info__time"><span class="event-card-icon__time"></span>1 p.m. PDT | 4 p.m. EDT</div>
+                    <div class="event-card-info__location"><span class="event-card-icon__play"></span>Recording Available</div>
+                    <div class="event-card-info__description">Event cart 2/4 description</div>
+                </div>
+            </article>
+             </div>
+    </div>
+    <div class="col span_1_of_4">
+        <div class= "grey-background">
+         <article class="event-card">
+                <a class="event-card__link" href="#">
+                    <img class="event-card__image" src="/img/examples/event-card-example-3.jpg" alt="Image description">
+                    <h1 class="event-card__title"><span>Event card 3/3 title</span></h1>
+                </a>
+                <div class="event-card-info">
+                    <div class="event-card-info__date">
+                        <span class="small-block">
+                            <span class="event-card-info__day">Wed</span>
+                            <span class="event-card-info__month">Aug</span>
+                        </span>
+                        <span class="event-card-info__number">19</span>
+                    </div>
+                    <div class="event-card-info__time"><span class="event-card-icon__time"></span>1 p.m. PDT | 4 p.m. EDT</div>
+                    <div class="event-card-info__location"><span class="event-card-icon__play"></span>Recording Available</div>
+                    <div class="event-card-info__description">Event cart 3/4 description</div>
+                </div>
+            </article>
+             </div>
+    </div>
+    <div class="col span_1_of_4">
+        <div class= "grey-background">
+         <article class="event-card">
+                <a class="event-card__link" href="#">
+                    <img class="event-card__image" src="/img/examples/event-card-example-4.jpg" alt="Image description">
+                    <h1 class="event-card__title"><span>Event card 3/3 title</span></h1>
+                </a>
+                <div class="event-card-info">
+                    <div class="event-card-info__date">
+                        <span class="small-block">
+                            <span class="event-card-info__day">Wed</span>
+                            <span class="event-card-info__month">Aug</span>
+                        </span>
+                        <span class="event-card-info__number">19</span>
+                    </div>
+                    <div class="event-card-info__time"><span class="event-card-icon__time"></span>1 p.m. PDT | 4 p.m. EDT</div>
+                    <div class="event-card-info__location"><span class="event-card-icon__play"></span>Recording Available</div>
+                    <div class="event-card-info__description">Event cart 4/4 description</div>
+                </div>
+            </article>
+             </div>
+    </div>
+</div>
