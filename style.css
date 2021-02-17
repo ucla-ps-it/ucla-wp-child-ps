@@ -409,3 +409,8 @@ a:hover .small-link-bhy
 {
   background: #F2F2F2;
 }
+/*positioning*/
+.center{
+ margin-left : 100px;
+ display: inline;
+}
