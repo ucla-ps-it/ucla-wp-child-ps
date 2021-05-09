@@ -31,4 +31,43 @@ add_filter( 'upload_size_limit', 'AOS_increase_upload' );
 function AOS_increase_upload( $bytes )
 {
 	return 26214400; // 1 megabyte
+}                // CPT 
+function custom_post_type_publication()
+{
+        $labels = array(
+                'name' => 'Publications',
+                'singular_name' => 'Publications',
+                'add_new' => 'Add  Publication',
+                'all_items' => 'All Items',
+                'add_new_item' => 'Add Item',
+                'edit_item' => 'Edit Item',
+                'new_item' => 'New Item',
+                'view_item' => 'View Item',
+                'search_item' => 'Search Portfolio',
+                'not_found' => 'No items found',
+                'not_found_in_trash' => 'No items found in trash',
+                'parent_item_colon' => 'Parent  Item'
+        );
+        $args = array(
+'labels' => $labels,
+                'public' => true,
+                'has_archive' => true,
+                'publicly_queryable' =>  true,
+                'query_var' => true,
+                'rewrite' => true,
+                'capability_type' => 'post',
+                'hierarchical' => true,
+                'support' => array(
+                        'title',
+                        'editor',
+                        'excerpt',
+                        'revisions',
+                ),
+                'taxonomies' =>  array('category', 'post_tag'),
+                'menu_position' => 5,
+                'exclude_from_search' => false
+        );
+        register_post_type('publication', $args);
 }
+add_action('init','custom_post_type_publication');
+
