@@ -32,11 +32,11 @@ function AOS_increase_upload( $bytes )
 {
 	return 26214400; // 1 megabyte
 }                // CPT 
-function custom_post_type_publication()
+/*function custom_post_type_publication()
 {
         $labels = array(
                 'name' => 'Publications',
-                'singular_name' => 'Publications',
+                'singular_name' => 'Publication',
                 'add_new' => 'Add  Publication',
                 'all_items' => 'All Items',
                 'add_new_item' => 'Add Item',
@@ -52,22 +52,38 @@ function custom_post_type_publication()
 'labels' => $labels,
                 'public' => true,
                 'has_archive' => true,
-                'publicly_queryable' =>  true,
+		'menu-icon' => 'dashicons-analytics',
+		'publicly_queryable' =>  true,
                 'query_var' => true,
                 'rewrite' => true,
                 'capability_type' => 'post',
                 'hierarchical' => true,
-                'support' => array(
+                'supports' => array(
                         'title',
                         'editor',
                         'excerpt',
-                        'revisions',
-                ),
-                'taxonomies' =>  array('category', 'post_tag'),
+			'revisions',
+			'thumbnail',
+			'custom-fields',
+		),
+                //'taxonomies' =>  array('category', 'post_tag'),
                 'menu_position' => 5,
                 'exclude_from_search' => false
         );
         register_post_type('publication', $args);
 }
 add_action('init','custom_post_type_publication');
+function publications_taxonomy()
+{
+        $args = array(
+                'labels' => array(
+                        'name' => 'Years',
+                        'singular_name' => 'Year',
+                ),
+                'public' => true,
+                'hierarchical' => true, //acts like a category
+        );
+        register_taxonomy('years', array('publication'), $args);
+}
+add_action('init', 'publications_taxonomy');*/
 
