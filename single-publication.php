@@ -1,4 +1,4 @@
-        <?php
+       <?php
 
 $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) );
 
@@ -20,7 +20,7 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) );
     <div class="ucla campus">
 
       <div class="col span_9_of_12"><?php edit_post_link(); ?>
-         <?php the_content(); ?>
+ <?php the_content(); ?>
 
         <?php
             /** @var string|false|WP_Error $tag_list */
@@ -62,7 +62,6 @@ $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) );
 </li>
 <?php endif;?>
 <?php if( get_post_meta($post->ID, 'DOI', true)):?>
-
 <li>
  DOI: <?php echo get_post_meta($post->ID, 'DOI', true);?>
 </li>
