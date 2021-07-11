@@ -151,6 +151,32 @@ function deptdir_get_avatar_url( $url, $id_or_email, $args ) {
 }
 
 
+function extra_profile_fields($user){ ?>
+    
+    <h3><?php _e('Extra User Information'); ?></h3>
+<table class="form-table">
+        <tr>
+            <th><label for="phone-number">Phone number</label></th>
+<td>
+            <input type="text" name="phone-number" id="phone-number" value="<?php echo esc_attr( get_the_author_meta( 'phone-number', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description">Enter your work phone number.</span>
+            </td>
+ </tr>
+        <tr>
+            <th><label for="office-location">Office location</label></th>
+            <td>
+ <input type="text" name="office-location" id="office-location" value="<?php echo esc_attr( get_the_author_meta( 'office-location', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description">Enter your office building and number.</span>
+            </td>
+        </tr>
+</table>
+<?php 
+
+}
+add_action( 'show_user_profile', 'extra_profile_fields', 10 );
+add_action( 'edit_user_profile', 'extra_profile_fields', 10 );
+~                                                               
+
 
 
 
