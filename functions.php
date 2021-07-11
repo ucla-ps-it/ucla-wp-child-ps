@@ -175,7 +175,6 @@ function extra_profile_fields($user){ ?>
 }
 add_action( 'show_user_profile', 'extra_profile_fields', 10 );
 add_action( 'edit_user_profile', 'extra_profile_fields', 10 );
-~                                                               
 
 
 
