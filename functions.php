@@ -150,9 +150,8 @@ function deptdir_get_avatar_url( $url, $id_or_email, $args ) {
 	}
 }
 
-
 function extra_profile_fields($user){ ?>
-    
+
     <h3><?php _e('Extra User Information'); ?></h3>
 <table class="form-table">
         <tr>
@@ -169,12 +168,33 @@ function extra_profile_fields($user){ ?>
             <span class="description">Enter your office building and number.</span>
             </td>
         </tr>
+<tr>
+            <th><label for="user-role">Position</label></th>
+            <td>
+ <input type="text" name="user-role" id="user-role" value="<?php echo esc_attr( get_the_author_meta( 'user-role', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description">Enter your position within the department.</span>
+            </td>
+        </tr>
+
 </table>
-<?php 
+<?php
 
 }
 add_action( 'show_user_profile', 'extra_profile_fields', 10 );
 add_action( 'edit_user_profile', 'extra_profile_fields', 10 );
+
+function save_extra_profile_fields( $user_id ) {
+
+
+    if ( !current_user_can( 'edit_user', $user_id ) )
+        return false;
+    update_usermeta( $user_id, 'phone-number', $_POST['phone-number'] );
+    update_usermeta( $user_id, 'office-location', $_POST['office-location'] );
+    update_usermeta( $user_id, 'user-role', $_POST['user-role'] );
+    }
+
+add_action( 'personal_options_update', 'save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_profile_fields' );
 
 
 
